@@ -1,0 +1,21 @@
+{
+  "name": "webtech-project",
+  "version": "1.0.0",
+  "description": "This is a web Tech project backend for final yr boiis boiis boiis",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "Kedar Devasthali",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.7.0",
+    "graphql-iso-date": "^3.6.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14",
+    "socket.io": "^4.3.1"
+  }
+}
