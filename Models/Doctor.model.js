@@ -9,8 +9,11 @@ const DoctorSchema=Schema({
     type:{type:String},
     timeDiff:{type:Number},
     rating:{type:Number},
+    email:{type:String,required:true},
+    password:{type:String,required:true},
     isVerified:{type:Boolean,required:true},
-    certificate:{type:String,required:true}
+    certificate:{type:String,required:true},
+    accessToken:{type:String,required:true}
 })
 const Doctors=mongoose.model('Doctor',DoctorSchema)
 module.exports=Doctors

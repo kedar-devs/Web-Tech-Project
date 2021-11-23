@@ -1,5 +1,6 @@
 const graphql = require('graphql')
 const dater = require('graphql-iso-date')
+const User = require('../Models/User.model')
 const { GraphQLString,
     GraphQLFloat,
     GraphQLInt,
@@ -80,6 +81,28 @@ const Appointment = new GraphQLObjectType({
         }
     })
 })
+const Mutation=new GraphQLObjectType({
+    name:"Mutation",
+    fields:{
+        addUser:{
+            type:userType,
+            args:{
+                id: { type: GraphQLID },
+                name: { type: GraphQLString },
+                address: { type: GraphQLString },
+                lat: { type: GraphQLFloat },
+                lon: { type: GraphQLFloat },
+                DOB: { type: GraphQLDate },
+                parentName: { type: GraphQLString },
+                phoneNumber: { type: GraphQLInt },
+                email: { type: GraphQLString }
+            },
+            resolve(parent,args){
+
+            }
+        }
+    }
+})
 const RootQuery = new GraphQLObjectType({
     name: 'RootQueryType',
     fields: {
@@ -128,5 +151,6 @@ const RootQuery = new GraphQLObjectType({
     }
 })
 module.exports = new GraphQLSchema({
-    query: RootQuery
+    query: RootQuery,
+    mutation:Mutation
 })

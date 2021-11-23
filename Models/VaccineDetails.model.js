@@ -6,7 +6,8 @@ const VaccineDetailSchema=Schema({
     date:{type:String,required:true},
     uid:{type:mongoose.Schema.Types.ObjectId,required:true},
     phoneNumber:{type:Number,required:true},
-    userName:{type:String,required:true}
+    userName:{type:String,required:true},
+    docName:{type:String,required:true}
 })
 const Vaccine=mongoose.model('Vaccine',VaccineDetailSchema)
 module.exports=Vaccine
